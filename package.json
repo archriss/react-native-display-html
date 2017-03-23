@@ -37,7 +37,6 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-addons-shallow-compare": "*",
     "react-native": "*"
   }
 }
