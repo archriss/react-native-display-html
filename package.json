@@ -1,0 +1,43 @@
+{
+  "name": "react-native-display-html",
+  "version": "1.0.0",
+  "description": "Display HTML content in an automatically sized webview and eases javascript injection inside it.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "github.com/archriss/react-native-display-html"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "component",
+    "webview",
+    "html",
+    "javascript",
+    "display",
+    "react-native",
+    "archriss",
+    "typescript",
+    "typed"
+  ],
+  "author": "Archriss",
+  "license": "ISC",
+  "dependencies": {
+    "react-native-webview-bridge": "git://github.com/archriss/react-native-webview-bridge.git#36a74a6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-preset-react-native": "^1.9.0",
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-config-standard-react": "^3.0.0",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-react": "^6.3.0",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-addons-shallow-compare": "*",
+    "react-native": "*"
+  }
+}
