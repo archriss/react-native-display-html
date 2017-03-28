@@ -19,7 +19,7 @@ We gave up, so here's `react-native-display-html`.
 ## Usage
 
 ```
-$ npm install --save react-display-html
+$ npm install --save react-native-display-html
 ```
 
 ```javascript
