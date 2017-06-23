@@ -44,6 +44,7 @@ export default class DisplayHTML extends Component {
         return `
             <!DOCTYPE html>
             <title>${this.props.title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <html>${this.HTMLStyles}
             <body>
                 <div class="article--content">
