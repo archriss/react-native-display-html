@@ -16,11 +16,17 @@ We gave up, so here's `react-native-display-html`.
 
 ![](https://puu.sh/uVFAX/963cb53848.png)
 
-## Usage
+## Installation
 
 ```
 $ npm install --save react-native-display-html
 ```
+
+**You also need to link `react-native-webview-bridge` as native dependency.** [Check the README here](https://github.com/archriss/react-native-webview-bridge) (you don't have to add the package manually, it will be installed by `react-native-display-html` in your `node_modules` folder).
+
+> We will continue relying on it until the `Webview` component backed into react-native's core is stable enough for our needs.
+
+## Usage
 
 ```javascript
 ...
