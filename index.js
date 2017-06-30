@@ -14,7 +14,8 @@ export default class DisplayHTML extends Component {
             containerStyle: View.propTypes.style,
             HTMLStyles: PropTypes.string,
             defaultHeight: PropTypes.number,
-            additionalHeight: PropTypes.number
+            additionalHeight: PropTypes.number,
+            bodyClass: PropTypes.string
         };
     };
 
@@ -24,7 +25,8 @@ export default class DisplayHTML extends Component {
         defaultHeight: 100,
         additionalHeight: 0,
         containerStyle: {},
-        style: {flex: 1}
+        style: { flex: 1 },
+        bodyClass: ''
     };
 
     constructor (props) {
@@ -46,10 +48,8 @@ export default class DisplayHTML extends Component {
             <title>${this.props.title}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <html>${this.HTMLStyles}
-            <body>
-                <div class="article--content">
-                    ${this.props.htmlString}
-                </div>
+            <body class="${this.props.bodyClass}">
+                ${this.props.htmlString}
             </body>
             </html>`;
     }

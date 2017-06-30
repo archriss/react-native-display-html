@@ -56,6 +56,7 @@ containerStyle | Style the container wrapping the webview | View style object | 
 HTMLStyles | CSS style to be injected | `string` |
 defaultHeight | Webview's height before it's updated | `number` | 100
 additionalHeight | Add some height to the webview once it's calculated | `number` | 0
+bodyClass | Add some height to the webview once it's calculated | `string` | `''`
 
 ## Tips and tricks
 
