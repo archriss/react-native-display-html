@@ -141,17 +141,12 @@ export default class DisplayHTML extends Component {
     render () {
         const { style, containerStyle } = this.props;
 
-        const container = [
-            containerStyle,
-            { height: this.state.height }
-        ];
-
         return (
-            <View style={container}>
+            <View style={containerStyle}>
                 <WebViewBridge
                   {...this.props}
                   injectedJavaScript={this._injectedScripts}
-                  style={style}
+                  style={[style, { height: this.state.height }]}
                   source={this.source}
                   onBridgeMessage={this.onMessage}
                 />
