@@ -25,7 +25,7 @@ export default class DisplayHTML extends Component {
         defaultHeight: 100,
         additionalHeight: 0,
         containerStyle: {},
-        style: { flex: 1 },
+        style: {},
         bodyClass: ''
     };
 
