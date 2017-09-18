@@ -85,7 +85,7 @@ export default class DisplayHTML extends Component {
             if (typeof document.height !== 'undefined') {
                 height = document.height;
             } else {
-                height = Math.max(B.scrollHeight, B.offsetHeight);
+                height = Math.min(B.scrollHeight, B.offsetHeight);
             }
             window.WebViewBridge.send(JSON.stringify({ height: height }));
         }
