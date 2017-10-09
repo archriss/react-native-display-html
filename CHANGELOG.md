@@ -1,3 +1,6 @@
+## 1.2.4
+* Import `PropTypes` from the dedicated package to make the plugin compatible with React `16+` and React Native `0.49+`
+
 ## 1.2.3
 * Use `ViewPropTypes` while preserving compatibility with React Native's older versions
 
