@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { View, WebView, Platform, ViewPropTypes } from 'react-native';
+import PropTypes from 'prop-types';
 import WebViewBridge from 'react-native-webview-bridge';
 
 export default class DisplayHTML extends Component {
