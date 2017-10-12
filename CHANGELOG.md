@@ -1,3 +1,6 @@
+## 1.2.5
+* Use a custom version of 'react-native-webview-bridge' compatible with React 16
+
 ## 1.2.4
 * Import `PropTypes` from the dedicated package to make the plugin compatible with React `16+` and React Native `0.49+`
 
