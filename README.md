@@ -2,9 +2,14 @@
 Display HTML content in an automatically sized webview and eases javascript injection inside it.
 Pull requests are very welcome!
 
-The motivation behind this is to stop parsing HTML to render it as native components. It might work on simple HTML when you have the freedom of tweaking it, but on much more complex HTML... it's just not possible yet. Don't even get me started on platform's specific rendering issues (don't you ever render an image inside a text component on Android !).
+### This module isn't maintained anymore :(
 
-We gave up, so here's `react-native-display-html`.
+The original reason we created this plugin was because no react-native plugin could handle complex HTML without breaking the rendering because of iOS and Android differences.
+Here, at [@archriss](https://github.com/archriss) we've spent quite some time working on this problem and released [react-native-render-html](https://github.com/archriss/react-native-render-html/), a plugin that renders your HTML snippets into 100% native views without breaking a sweat. You should check it out if you want to improve the performance of your apps !
+
+### Contributors wanted
+
+Soon, this plugin won't be used in any of our production apps. This means we've stopped maintaining it. If you're still using it and need to keep it updated, please open pull requests, we'll keep merging them.
 
 ## Table of contents
 
