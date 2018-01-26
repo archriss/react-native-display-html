@@ -50,7 +50,9 @@ export default class DisplayHTML extends Component {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <html>${this.HTMLStyles}
             <body class="${this.props.bodyClass}">
-                ${this.props.htmlString}
+                <div style="width: 100%; height: 100%" id="contentContainer">
+                    ${this.props.htmlString}
+                </div>
             </body>
             </html>`;
     }
@@ -81,7 +83,7 @@ export default class DisplayHTML extends Component {
      */
     heightScript () {
         function updateHeight () {
-            var B = document.body;
+            var B = document.getElementById("contentContainer");
             var height;
             if (typeof document.height !== 'undefined') {
                 height = document.height;
