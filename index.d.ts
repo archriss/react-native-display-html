@@ -16,6 +16,6 @@ interface ComponentProps extends React.Props<DisplayHTML, {}> {
     bodyClass?: string;
 }
 
-export class DisplayHTML extends React.Component<ComponentProps, {}> {
+export default class DisplayHTML extends React.Component<ComponentProps, {}> {
 
 }
