@@ -24,7 +24,7 @@
   "license": "ISC",
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react-native-webview-bridge": "git://github.com/archriss/react-native-webview-bridge.git#4f846f6"
+    "react-native-webview-bridge": "git+ssh://git@github.com:alinz/react-native-webview-bridge.git"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
