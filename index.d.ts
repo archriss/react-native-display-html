@@ -14,6 +14,7 @@ interface ComponentProps extends React.Props<DisplayHTML, {}> {
     defaultHeight?: number;
     additionalHeight?: number;
     bodyClass?: string;
+    customHeightScript?: Function;
 }
 
 export class DisplayHTML extends React.Component<ComponentProps, {}> {

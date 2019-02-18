@@ -3,6 +3,28 @@ import { View, WebView, Platform, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import WebViewBridge from 'react-native-webview-bridge';
 
+/**
+ * Checks regularly the height of the webview to update the webview
+ * accordingly.
+ * Note : this isn't transpiled and must be written in ES5 !
+ */
+function heightScript () {
+    function updateHeight () {
+        var B = document.body;
+        var height;
+        if (typeof document.height !== 'undefined') {
+            height = document.height;
+        } else {
+            height = Math.max(B.scrollHeight, B.offsetHeight);
+        }
+        window.WebViewBridge.send(JSON.stringify({ height: height }));
+    }
+    if (window.WebViewBridge) {
+        updateHeight();
+        setInterval(updateHeight, 1000);
+    }
+}
+
 export default class DisplayHTML extends Component {
 
     static propTypes () {
@@ -16,7 +38,8 @@ export default class DisplayHTML extends Component {
             HTMLStyles: PropTypes.string,
             defaultHeight: PropTypes.number,
             additionalHeight: PropTypes.number,
-            bodyClass: PropTypes.string
+            bodyClass: PropTypes.string,
+            customHeightScript: PropTypes.func
         };
     };
 
@@ -27,7 +50,8 @@ export default class DisplayHTML extends Component {
         additionalHeight: 0,
         containerStyle: {},
         style: {},
-        bodyClass: ''
+        bodyClass: '',
+        customHeightScript: heightScript
     };
 
     constructor (props) {
@@ -36,7 +60,7 @@ export default class DisplayHTML extends Component {
             height: props.defaultHeight + props.additionalHeight
         };
         this.onMessage = this.onMessage.bind(this);
-        this.additionalScripts = [this.heightScript];
+        this.additionalScripts = [this.props.customHeightScript];
         if (props.additionalScripts && props.additionalScripts.length) {
             this.additionalScripts = this.additionalScripts.concat(props.additionalScripts);
         }
@@ -72,28 +96,6 @@ export default class DisplayHTML extends Component {
         }
 
         return source;
-    }
-
-    /**
-     * Checks regularly the height of the webview to update the webview
-     * accordingly.
-     * Note : this isn't transpiled and must be written in ES5 !
-     */
-    heightScript () {
-        function updateHeight () {
-            var B = document.body;
-            var height;
-            if (typeof document.height !== 'undefined') {
-                height = document.height;
-            } else {
-                height = Math.max(B.scrollHeight, B.offsetHeight);
-            }
-            window.WebViewBridge.send(JSON.stringify({ height: height }));
-        }
-        if (window.WebViewBridge) {
-            updateHeight();
-            setInterval(updateHeight, 1000);
-        }
     }
 
     /**
